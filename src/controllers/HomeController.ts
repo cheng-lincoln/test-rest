@@ -4,7 +4,7 @@ import express from "express";
 @Route("")
 export class HomeController extends Controller {
   /**
-   * Returns the <html> for the home page
+   * Returns the html for the home page
    */
   @Get("/")
   public async home(
