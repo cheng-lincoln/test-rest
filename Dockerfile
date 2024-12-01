@@ -1,7 +1,9 @@
-FROM node:14
-WORKDIR /usr/src/app
-COPY . .
+FROM node
+WORKDIR /app
+COPY package.json package-lock.json /app/
 RUN npm ci
-EXPOSE 3000
+COPY . /app
 RUN npm run build
-CMD ["npm", "run", "start"]
+ENV PORT=8080
+EXPOSE 8080
+CMD ["npm", "start"]

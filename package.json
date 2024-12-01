@@ -8,7 +8,11 @@
     "build": "tsoa spec-and-routes && tsc",
     "start": "node build/src/server.js",
     "lint": "eslint --fix --ext ts src/",
-    "test": "jest"
+    "test": "jest",
+    "docker:build": "docker build -t test-rest .",
+    "docker:run": "docker run -it -p 8080:8080 test-rest",
+    "gcloud:submit": "gcloud builds submit -t asia-southeast1-docker.pkg.dev/dose-calculator-443108/dose-calculator-repository/test-rest ./"
+
   },
   "jest": {
     "preset": "ts-jest",
