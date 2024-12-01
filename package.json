@@ -1,5 +1,5 @@
 {
-  "name": "backend-express",
+  "name": "test-rest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,8 @@
     "test": "jest",
     "docker:build": "docker build -t test-rest .",
     "docker:run": "docker run -it -p 8080:8080 test-rest",
-    "gcloud:submit": "gcloud builds submit -t asia-southeast1-docker.pkg.dev/dose-calculator-443108/dose-calculator-repository/test-rest ./"
-
+    "gcloud:project": "gcloud config set project test-1-313305",
+    "gcloud:submit": "gcloud builds submit -t asia-southeast1-docker.pkg.dev/test-1-313305/misc/test-rest ./"
   },
   "jest": {
     "preset": "ts-jest",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/pandawaewae/backend-express.git"
+    "url": "git@github.com:cheng-lincoln/test-rest.git"
   },
-  "author": "",
+  "author": "Lincoln Cheng",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/pandawaewae/backend-express/issues"
+    "url": "https://github.com/cheng-lincoln/test-rest/issues"
   },
-  "homepage": "https://gitlab.com/pandawaewae/backend-express#readme",
+  "homepage": "https://github.com/cheng-lincoln/test-rest",
   "dependencies": {
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",

@@ -41,7 +41,7 @@ const songs: Song[] = [
 ]
 
 export class SongService {
-  public async getSongs(): Promise<Readonly<Song[]>> {
+  public async getSongs(): Promise<Song[]> {
     return songs;
   }
 
